@@ -15,7 +15,7 @@ use app\models\Category;
                                     ->column() ,[ 'prompt'=> '- Select Category -' ]);
     ?>
     <?= $form->field($job, 'title') ?>
-    <?= $form->field($job, 'description') ?>
+    <?= $form->field($job, 'description')->textArea(); ?>
     <?php
         echo $form->field($job, 'type')
                 ->dropDownList([
@@ -24,7 +24,7 @@ use app\models\Category;
                     'as_needed' => 'As Needed',
                 ],[ 'prompt' => '- Select Type -' ])
     ?>
-    <?= $form->field($job, 'requirements') ?>
+    <?= $form->field($job, 'requirements')->textArea(); ?>
     <?php
         echo $form->field($job, 'salary_range')
                 ->dropDownList([
